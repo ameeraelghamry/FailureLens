@@ -1,0 +1,65 @@
+MODEL B PROCESSED DATA VALIDATION
+=======================================================
+Dataset: D:\repos\FailureLens\datasets\model B\processed\RCAEval\re2tt_ts-order-service_delay_2\service_features.parquet
+Rows: 68
+Columns: 103
+
+1. REQUIRED COLUMNS
+-------------------------------------------------------
+PASS: All required columns exist.
+
+2. DUPLICATE SERVICE ROWS
+-------------------------------------------------------
+Duplicate service rows: 0
+
+3. ROOT-CAUSE LABEL
+-------------------------------------------------------
+Label counts:
+is_root_cause
+0    67
+1     1
+Positive root-cause rows: 1
+
+4. MISSING VALUES
+-------------------------------------------------------
+Columns with missing values:
+metric_error_post_max                   60
+metric_error_post_std                   60
+metric_error_post_mean                  60
+metric_error_pre_missing_fraction       60
+metric_error_pre_max                    60
+metric_error_pre_std                    60
+metric_error_mean_delta                 60
+metric_error_post_missing_fraction      60
+metric_error_pre_mean                   60
+trace_duration_post_max                 48
+trace_duration_pre_mean                 48
+trace_duration_post_mean                48
+trace_duration_pre_std                  48
+trace_duration_post_missing_fraction    48
+trace_duration_pre_missing_fraction     48
+trace_duration_mean_delta               48
+trace_duration_post_std                 48
+trace_duration_pre_max                  48
+metric_latency-50_pre_std               47
+metric_latency-50_mean_delta            47
+
+5. INFINITE NUMERIC VALUES
+-------------------------------------------------------
+No infinite numeric values found.
+
+6. MODEL INPUTS VS. LABEL
+-------------------------------------------------------
+Potential input feature columns: 100
+Target label column: is_root_cause
+The target label must never be included as an input feature.
+Case ID and service name are identifiers, not numeric evidence.
+No obvious target-label columns found among potential inputs.
+
+7. VALIDATION SUMMARY
+-------------------------------------------------------
+STATUS: STRUCTURAL CHECKS PASSED.
+Missing values still require documented handling.
+This single case is not sufficient for model training.
+
+Validation finished. The dataset was not modified.
